@@ -1,0 +1,106 @@
+\def\usewhat{pdflatex}
+
+% 插入空白页可以设置openright
+\documentclass[12pt,openany,oneside]{book}
+
+% 定义本文所使用宏包
+\input{setup/package}
+
+% 定义所有的.eps/.pdf图片文件在figure子目录下
+\graphicspath{{figure/}}
+
+\begin{document}
+
+% 开始中文字体使用
+\begin{CJK*}{UTF8}{song}
+
+% 完成对论文各个部分格式的设置
+\input{setup/format}     
+
+% ——————————————————————————————————————————————
+% 以下是论文导言部分，包括论文的封面，中英文摘要和中文目录
+
+\frontmatter
+\fancypagestyle{plain}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0 pt}
+
+\fancyfoot[C]{\wuhao\thepage}
+}
+
+%%%%%%%%%%   封面   %%%%%%%%%%
+
+\input{preface/cover}
+
+%%%%%%%%%%   摘要   %%%%%%%%%%
+
+\input{preface/abstract}
+
+%%%%%%%%%%   目录   %%%%%%%%%%
+\defaultfont
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+\clearpage
+%\pagestyle{empty}
+%\setcounter{page}{1}                                 % 单独从 1 开始编页码
+%\pagenumbering{arabic}
+\titleformat{\chapter}{\centering\sanhao\song}{\chaptername}{2em}{} % 设置目录两字的格式
+
+\tableofcontents                                     % 中文目录
+
+
+\thispagestyle{plain}
+
+% ——————————————————————————————————————————————
+% 以下是论文正文，内容在body子文件夹下
+
+\mainmatter\defaultfont\sloppy\raggedbottom
+\makeatletter
+	\fancypagestyle{plain}{                              % 设置开章页眉页脚风格
+		\fancyhf{}
+		\fancyhead[C]{\song\wuhao \@cheading}            % 首页页眉格式
+		\fancyfoot[C]{\song\wuhao ~\thepage~}           % 首页页脚格式
+		\renewcommand{\headrulewidth}{0.5pt}
+		\renewcommand{\footrulewidth}{0pt}}
+\makeatother
+
+
+% 单独从 1 开始编页码
+\setcounter{page}{1}
+% chapter标题格式：三号，黑体，左对齐
+\titleformat{\chapter}{\centering\sanhao\hei}{\chaptername}{2em}{}
+
+%%%%%%%%%%   正文   %%%%%%%%%%
+
+\input{body/introduction}
+\newpage
+\input{body/architecture}
+\newpage
+\input{body/feature}
+\newpage
+\input{body/detail}
+\newpage
+\input{body/outlook}
+\newpage
+\input{appendix/summary}
+
+\clearpage
+
+%%%%%%%%%%  参考文献  %%%%%%%%%%
+\bibliographystyle{references/FengruCupStyle}
+\markboth{参考文献}{参考文献}
+\addcontentsline{toc}{chapter}{参考文献}
+\nocite{*}
+\bibliography{references/ref}
+
+
+%%%%%%%%%%   附录   %%%%%%%%%%
+
+% \include{appendix/material}
+% \include{appendix/code}
+
+% % 重新设置想要的chapter格式
+% \titleformat{\chapter}{\raggedright\sihao\hei}{\chaptername}{2em}{}
+
+\clearpage
+\end{CJK*}
+\end{document}
