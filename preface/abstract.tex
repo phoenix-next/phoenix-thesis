@@ -1,11 +1,13 @@
 \cabstract{
 
-    “刷题”对于每一名计算机专业的学生而言无疑是重要的，不仅它可以扎实学生的编程基础，而且面试企业工作首先就要用题来考查面试者。但是目前市面上的在线评测系统大多存在着一定的缺陷，由于采用集中评测制，不能良好的应对不定期的大流量评测事件，例如举办特定的比赛。此外，该类系统的功能大多单一，用户在实现刷题后很难与其他用户进行交流心得，或是发布自己的教程。
-    
-    为此，我们提出了基于Electron-Vue+Gin框架的轻量级、分布式、All-in-one的分布式综合性学习平台。本系统内置了相当多的题目供用户作答。由于采用了分布式部署的策略，评测阶段将会在客户端运行，用户仅需将评测结果上传至云端，相较于传统评测系统大大增加了系统的并发量。可以良好的应对各种大型比赛活动的评测。此外，为了增加用户之间的知识共享，我们还设置了讨论区与教程区，用户可以在里面自由发表观点与对题目的建议互相讨论题目，并在教程区发表一系列教程来发表自己对于某一块知识的理解供其他用户交流学习。
+    对于每一名编程学习者而言，编程练习是掌握相关知识的必经之路。编程学习者进行编程练习的目的各不相同，也许是为了提高编程的技术水平，也许是为了准备企业的笔试和面试，又也许是为了完成一个科目的大作业……
+
+    为了满足编程练习的需求，出现了在线评测网站，这些网站提供了一些编程题，有相关学习需求的人可以在线提交编程题的答案，并获得网站评测后的结果。但是，目前市面上所有的在线评测系统都具有一些共性的问题。例如，它们都采用集中评测的方式，当大流量的评测事件发生时，用户并不能在期望的时间内完成评测。另外，已有的评测系统太过纯粹了，学习者只能在评测网站上验证已知的知识，新知识的获取则需另寻他途。
+
+    为了解决这些问题，我们设计并开发了主要基于Electron的新一代编程学习平台——PhoeniX。PhoeniX提供了编程学习的一体化解决方案，PhoeniX包括教程共享、在线评测、组织管理、比赛等子系统。相比于市面上的在线评测系统，PhoeniX的题目评测在用户端分布式进行，用户仅需将评测结果上传至云端，避免了在服务端进行评测时的卡顿现象，可以良好地应对各种大型比赛活动的评测需求。此外，PhoeniX提供了知识共享服务，用户可以在讨论区分享对于题目的见解，也可以在教程区发布编程学习的交互式的教程，以供其他用户交流学习。
 }
 
-\ckeywords{分布式，在线评测，开源软件}
+\ckeywords{分布式，在线评测，编程学习，知识共享}
 
 \eabstract{
     "Coding" for every computer major students is undoubtedly important, not only it can solid programming foundation of students, but also the interview of enterprise work must first use the question to examine the interviewer.  However, most of the online evaluation systems on the market have some defects. Because of the centralized evaluation system, they can not cope with the irregular large-scale evaluation events, such as holding specific competitions.  In addition, most of the functions of this system are single, so it is difficult for users to communicate with other users or publish their own tutorials.
@@ -13,7 +15,7 @@
     Therefore, we propose a lightweight, distributed, all-in-one distributed comprehensive learning platform based on the Electron-Vue+Gin framework.  This system has built in quite a number of questions for users to answer.  Due to the distributed deployment strategy, the evaluation phase will run on the client side, and users only need to upload the evaluation results to the cloud, which greatly increases the concurrency of the system compared with the traditional evaluation system.  Can deal with the evaluation of various large-scale competition activities.  In addition, in order to increase knowledge sharing among users, we also set up discussion area and tutorial area, where users can freely express their views and suggestions on topics and discuss topics with each other, and publish a series of tutorials in the tutorial area to express their understanding of a certain piece of knowledge for other users to exchange and learn.
 }
 
-\ekeywords{Distributed, Online judge, Open source software}
+\ekeywords{Distributed, Online Judge, Programming Learning, Knowledge Sharing}
 
 \makecover
 

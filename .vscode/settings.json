@@ -40,33 +40,53 @@
     {
       "name": "bibtex",
       "command": "bibtex",
-      "args": ["%DOCFILE%"]
+      "args": [
+        "%DOCFILE%"
+      ]
     }
   ],
   "latex-workshop.latex.recipes": [
     {
       "name": "pdflatex -> bibtex -> pdflatex*2",
-      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
     },
     {
       "name": "xelatex -> bibtex -> xelatex*2",
-      "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+      "tools": [
+        "xelatex",
+        "bibtex",
+        "xelatex",
+        "xelatex"
+      ]
     },
     {
       "name": "XeLaTeX",
-      "tools": ["xelatex"]
+      "tools": [
+        "xelatex"
+      ]
     },
     {
       "name": "PDFLaTeX",
-      "tools": ["pdflatex"]
+      "tools": [
+        "pdflatex"
+      ]
     },
     {
       "name": "BibTeX",
-      "tools": ["bibtex"]
+      "tools": [
+        "bibtex"
+      ]
     },
     {
       "name": "LaTeXmk",
-      "tools": ["latexmk"]
+      "tools": [
+        "latexmk"
+      ]
     }
   ],
   "latex-workshop.latex.clean.fileTypes": [
@@ -92,5 +112,6 @@
   ],
   "latex-workshop.latex.autoClean.run": "onFailed",
   "latex-workshop.latex.recipe.default": "lastUsed",
-  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click"
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "editor.wordWrap": "on"
 }
