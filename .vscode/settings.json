@@ -115,6 +115,7 @@
   "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
   "editor.wordWrap": "on",
   "editor.unicodeHighlight.allowedLocales": {
-    "zh-hans": true
+    "zh-hans": true,
+    "zh-hant": true
   }
 }
