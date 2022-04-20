@@ -113,5 +113,9 @@
   "latex-workshop.latex.autoClean.run": "onFailed",
   "latex-workshop.latex.recipe.default": "lastUsed",
   "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "editor.unicodeHighlight.allowedLocales": {
+    "zh-hans": true,
+    "zh-hant": true
+  }
 }

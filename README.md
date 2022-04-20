@@ -1,6 +1,6 @@
-# Phoenix-Thesis
+# PhoeniX-Thesis
 
-Phoenix 整个项目的论文，用于描述 Phoenix 的设计和实现。
+PhoeniX 整个项目的论文，用于描述 PhoeniX 的设计和实现。
 
 ## 环境配置
 
