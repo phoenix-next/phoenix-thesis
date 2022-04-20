@@ -8,12 +8,12 @@
 
 \section{教程的渲染}
 
-PhoeniX给用户呈现的教程需要能够嵌入代码执行环境，渲染Latex公式以及Markdown语法，保证渲染后的教程对用户而言没有安全风险。经过考量之后，我们选用了以markdown-it渲染器为核心的渲染方案，原因有如下几点：
+PhoeniX给用户呈现的教程需要能够嵌入代码的可执行环境，渲染Latex公式以及Markdown语法，保证渲染后的教程对用户而言没有安全风险。经过考量之后，我们选用了以markdown-it渲染器为核心的渲染方案，原因有如下几点：
 
 \begin{enumerate}
     \item 教程的渲染需要较高的效率，而且之后可能需要支持更多的语法与渲染内容，引入第三方封装的markdown编辑器做渲染是明显不合适的，这些编辑器的渲染效率不高，且难以自定义渲染效果。
     \item markdown-it渲染器本身足够轻量，使用者和维护者都较多，能够识别并正确渲染HTML保证用户安全，且支持自定义插件，容易自定义渲染效果。
-    \item markdown-it有一些现成的足够轻量的插件，分别能够支持Latex渲染、Markdown扩展语法渲染等任务，不需要重新手写太多插件。
+    \item markdown-it已经有了一些现成的足够轻量的开源插件，分别能够支持Latex渲染、Markdown扩展语法渲染等任务，不需要重新手写太多插件。
 \end{enumerate}
 
 然而，markdown-it渲染器只能完成最基本的渲染任务，对于内嵌的代码执行环境，我们是使用Monaco编辑器和Xterm虚拟终端实现的。Monaco编辑器和Xterm终端是微软的开源项目Visual Studio Code（以下简称VSCode）解决方案的一部分，考虑到VSCode给用户提供的绝佳体验，我们认为VSCode的编辑器解决方案是成功的。在PhoeniX的具体实现上，我们对Monaco和Xterm都进行了一定程度的自定义，使其能够较为美观的呈现，并保有执行我们提供的命令的基本功能。
